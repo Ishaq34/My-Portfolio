@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Projet Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3cbb74000e.js" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+    body {
+        margin:0;
+        padding: 0;
+        height: 100vh;
+        background-color: #f1f1f1;
+    }
+    .navbar-brand {
+        font-size: 25px;
+        font-family: 'Kaushan Script';
+    }
+    #navbarCollapse a {
+        font-size: 20px;
+    }
+    header {
+        background-image: url(https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg);
+        background-size: cover;
+        height: 80vh;
+    }
+
+    .text-intro {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+
+    .pretext {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 90px;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    #home-icons {
+        padding-top: 100px;
+        padding-bottom:100px;
+        border-top: 1px solid #000;
+    }
+    #start {
+        background-image: url(https://images5.alphacoders.com/456/thumb-1920-456536.jpg);
+        position: relative;
+        min-height: 200px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: #fff;
+    }
+    #start h2 {
+        font-size: 40px;
+        color: #f1f1f1;
+    }
+    #clients img {
+        margin-top: -50px;
+    }
+
+    .fab {
+        font-size: 25px;
+        color: darkblue;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="main-nav">
+        <div class="container">
+            <a href="vitrine1.html" class="navbar-brand">JobFacile</a>
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-1">
+                        <a href="#top" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item mr-1">
+                        <a href="#concept" class="nav-link">Concept</a>
+                    </li>
+                    <li class="nav-item mr-1">
+                        <a href="#clients" class="nav-link">Nos Clients</a>
+                    </li>
+                    <li class="nav-item mr-1">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center" id="top">
+        <div class="text-intro">
+            <div class="pretext text-white font-italic">Décrochez le job de vos rêves</div>
+            <h1>Job Facile</h1>
+            <a href="#" class="btn btn-primary">En savoir plus</a>     
+        </div>
+    </header>
+
+
+    <section id="concept" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <h3>Lorem</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam massa neque, semper a sodales sollicitudin, dapibus interdum ipsum.</p>
+                    <a href="#" class="btn btn-outline-danger"> Découvrir</a>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="https://purepng.com/public/uploads/large/purepng.com-laptop-notebooklaptopsnotebooknotebook-computerclamshell-1701528354844ktgom.png" alt="Ordinateur" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="home-icons">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 mb-4 text-center">
+                    <i class="fas fa-cog fa-3x mb-2"></i>
+                    <h3>Outils Performants</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit massa ante, eu egestas ligula dignissim sed. Curabitur ornare tellus erat, et varius nunc scelerisque a. Quisque fringilla nulla nulla, id vehicula risus pulvinar facilisis.</p>
+                </div>
+
+                <div class="col-md-4 mb-4 text-center">
+                    <i class="fas fa-cloud fa-3x mb-2"></i>
+                    <h3>Protection des Données</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit massa ante, eu egestas ligula dignissim sed. Curabitur ornare tellus erat, et varius nunc scelerisque a. Quisque fringilla nulla nulla, id vehicula risus pulvinar facilisis.</p>
+                </div>
+
+                <div class="col-md-4 mb-4 text-center">
+                    <i class="fas fa-cart-plus fa-3x mb-2"></i>
+                    <h3>Gagnez de l'argents</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit massa ante, eu egestas ligula dignissim sed. Curabitur ornare tellus erat, et varius nunc scelerisque a. Quisque fringilla nulla nulla, id vehicula risus pulvinar facilisis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="start" class="py-5">
+        <div class="container py-5">
+            <h2 class="pb-3">Etes-vous prêt à commencer?</h2>
+            <p class="d-none d-md-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam vel distinctio
+            soluta nihil. Odio, quibusdam.</p>
+            <a href="#" class="btn btn-primary">Démarrez Maintenant</a>
+        </div>
+    </section>
+
+
+    <section id="clients" class="my-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="info-header mb-5">
+                        <h2 class="pb-3">Nos Clients</h2>
+                        <p class="lead pb-5">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, omnis nostrum illum
+                            maiores excepturi magni?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="visage" class="img-fluid rounded-circle w-50 mb-3">
+                            <h3>Laurent</h3>
+                            <h5 class="text-muted">Gérant Exosite</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat fugit dolore
+                            consequuntur, iusto delectus minus ex.</p>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4">
+                                    <a href="http://facebook.com">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href="http://twitter.com">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href="http://instagram.com">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="visage" class="img-fluid rounded-circle w-50 mb-3">
+                            <h3>Tom</h3>
+                            <h5 class="text-muted">Animateur 3D</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat fugit dolore
+                            consequuntur, iusto delectus minus ex.</p>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4">
+                                    <a href="http://facebook.com">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href="http://twitter.com">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href="http://instagram.com">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/lego/6.jpg" alt="visage" class="img-fluid rounded-circle w-50 mb-3">
+                            <h3>Claude François</h3>
+                            <h5 class="text-muted">Electricien</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat fugit dolore
+                            consequuntur, iusto delectus minus ex.</p>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4">
+                                    <a href="http://facebook.com">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href="http://twitter.com">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href="http://instagram.com">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/women/64.jpg" alt="visage" class="img-fluid rounded-circle w-50 mb-3">
+                            <h3>Marie</h3>
+                            <h5 class="text-muted">Web-Design</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat fugit dolore
+                            consequuntur, iusto delectus minus ex.</p>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4">
+                                    <a href="http://facebook.com">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href="http://twitter.com">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href="http://instagram.com">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="text-center p-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Contactez-moi</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat fugit dolore consequuntur, iusto delectus minus ex.</p>
+
+                    <form class="form-inline justify-content-center">
+                        <input type="text" class="form-control mb-2 mr-2" placeholder="Nom">
+                        <input type="text" class="form-control mb-2 mr-2" placeholder="Email">
+                        <button class="btn btn-primary" style="margin-bottom: 9px;"> Envoyer</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer" class="text-center p-4">
+        <div class="container">
+            <div class="col">
+                <p>Copyright &copy; Assal Ishaq |
+                    <span>Job Facile</span>
+                </p>
+            </div>      
+        </div>
+    </footer>
+
+</body>
+</html>

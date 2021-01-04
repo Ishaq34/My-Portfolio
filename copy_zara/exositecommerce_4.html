@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>document.write('<link rel="stylesheet" href="extensible.css?dev=' +Math.floor(Math.random() *64) +'"\><\/>');</script>
+	<meta charset="utf-8">
+	<title>ZARA France | Nouvelle Collection en ligne</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" size="32x32" href="https://static.zara.net/stdstatic/1.143.0-b.43//images/favicon-32x32.png">
+	<style type="text/css">
+
+	body {
+		font-family:'Roboto', sans-serif;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+		font-size: 100%;
+		vertical-align: baseline;
+	}
+	.header1 {
+		height: 32px;
+		position: fixed;
+		z-index: 500;
+	}
+	.section1 {
+		position: relative;
+		width: 100%;
+		min-height: 768px;
+		padding-left: 0;
+		padding-top: 0;
+		overflow: hidden;
+
+	}
+	.svgiconemenu {
+		position: absolute;
+		opacity: 1;
+		transition: 1s;
+		padding: 30px 32px 40px 16px;
+		height: 32px;
+		width: 32px;
+		top: 0;
+		left: 0;
+	}
+	.listemenunav  {
+		display: flex;
+		list-style-type: none;
+		text-align: center;
+		font-size: 12px;
+		letter-spacing: .2px;
+		align-items: center;
+	}
+	li {
+		list-style-type: none;
+		margin-right: 16px;
+		vertical-align: center;
+		font-family:'Roboto', sans-serif;
+	}
+	a {
+		z-index: 5;
+		text-decoration-line: none;
+		color: black;
+	}
+	.barrenav {
+		position: absolute;
+		display: flex;
+		font-family:'Roboto', sans-serif;
+		min-width: 1500px;
+		max-width: 100%;
+		flex-direction: row-reverse;
+
+	}
+	.nav1 {
+		padding-top: 15px;
+	}
+}
+.barrederecherchee {
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+}
+.barrederecherche {
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+	letter-spacing: -0.5px;
+	width: 300px;
+	padding-top: 30px;
+}
+.imageproduit {
+	min-height: 858px;
+	vertical-align: middle;
+	zoom: 1;
+	float: left;
+	width: 60%;
+}
+.imageproduit1 {
+	display: block;
+	position: relative;
+	margin: 0;
+	width: 100%;
+}
+.imageproduit2 {
+	margin-bottom: -4px;
+	width: 100%;
+}
+.photovieux {
+	z-index: 0;
+	position: relative;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+
+}
+.footer1 {
+	width: 100%;
+	max-height: 100vh;
+	font-family:'Roboto', sans-serif;
+}
+.sectionfooter {
+	margin: 120px 0 80px;
+}
+.newsletter {
+	display: block;
+	letter-spacing: .3px;
+	font-stretch: condensed;
+	line-height: 36px;
+	margin-bottom: -50px;
+	padding-bottom: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+}
+.footermail {
+	letter-spacing: .05em;
+	font-weight: 400;
+	text-align: center;
+	display: flex;
+	padding-top: 30px;
+	justify-content: center;
+}
+.saisiemailfooter {
+	position: absolute;
+	margin-top: 8px;
+	font-size: 12px;
+	letter-spacing: .2px;
+	line-height: 20px;
+	text-align: center;
+	opacity: .8;
+}
+.saisiemail {
+	border:none;
+	letter-spacing: .05em;
+	font-weight: 400;
+	width: 260px;
+	padding: 3px;
+	border-bottom: 1px solid black;
+}
+.listereseaux a {
+	text-align: center;
+	margin-top: 50px;
+	list-style-type: none;
+	color: black;
+
+}
+.listereseaux {
+	margin-bottom: 150px;
+}
+.listereseauxsociaux {
+	display: inline-block;
+	margin: 1em 2em;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 400;
+	margin-bottom: 50px;
+}
+.formulairefooter fieldset {
+	border:none;
+	text-align: center;
+	margin-top: 80px;
+	border-bottom: 1px solid black;
+}
+.blancfooter {
+	width: auto;
+	height: 31vh;
+	border-top: 1px solid #efefef;
+	margin-left: 180px;
+	margin-right: 10px;
+}
+.ulitems {
+	margin-right: -32px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.listeimageproduit {
+	margin-bottom: 6px;
+	width: 23.6%;
+	margin-right: 6px;
+	padding-left: 10px;
+}
+.sectionimageproduit {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	min-height: 500px;
+	box-sizing: border-box;
+}
+.listefooter {
+	margin: 40px 0;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.2px;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	text-align: start;
+}
+.lifooter {
+
+	vertical-align: top;
+	zoom: 1;
+	text-transform: uppercase;
+	width: 25%;
+	padding: 0 16px;
+}
+.listetextefooter {
+	font-size: 14px;
+	letter-spacing: .3px;
+	font-stretch: condensed;
+	font-weight: 700;
+	line-height: 20px;
+	padding-bottom: 24px;
+}
+.listetextefooter2 {
+	margin-bottom: 16px;
+	font-size: 12px;
+}
+.france {
+	margin-top: 30vh;
+}
+.ulfrance {
+	border-top: 1px solid #efefef;
+	padding-top: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+}
+.categorie {
+	margin-bottom: 50px;
+}
+.ulcategorie {
+	display: flex;
+	justify-content: space-between;
+}
+.categorie1 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.categorie2 {
+	font-size: 12px;
+	opacity: .5;
+}
+.paniernav {
+	position: fixed;
+	padding-top: 104px;
+	float: left;
+	right: 32px;
+	width: 35vw;
+	font-family:'Roboto', sans-serif;
+}
+.paniernav1 {
+	position: relative;
+	overflow: visible;
+	top: 0px;
+}
+.paniernav2 {
+	width: 30vw;
+}
+.titrepanier {
+	font-size: 20px;
+	letter-spacing: .3px;
+	line-height: 0px;
+}
+.prixpanier {
+	font-size: 16px;
+	letter-spacing: .3px;
+	line-height: 20px;
+	font-weight: 700;
+	opacity: 0.8;
+}
+.infopanier {
+
+}
+.textpanier {
+	font-size: 14px;
+	letter-spacing: .2px;
+	line-height: 16px;
+}
+.boutonafficherplus {
+	background: transparent url(../../icons/new-arrow-down.svg) no-repeat 0;
+	background-size: 8px;
+	font-size: 12px;
+	letter-spacing: .2px;
+	border: none;
+	cursor: pointer;
+	padding: 0 0 0 12px;
+	text-transform: lowercase;
+}
+.formulairepanier {
+	margin-bottom: 40px;
+}
+fieldset {
+	margin: 16px 0;
+	overflow: hidden;
+	text-align: left;
+	zoom: 1;
+	min-width: 74%;
+	border:none;
+}
+.ajouterpanier {
+	font-size: 16px;
+	letter-spacing: .2px;
+	font-stretch: condensed;
+	font-weight: 700;
+	background-color: #000;
+	border: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 20px;
+	outline: 0;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100%;
+}
+.comingsoon {
+	overflow: hidden;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	width: 100%;
+	max-height: 262px;
+}
+.comingsoon1 {
+	display: flex;
+	margin: 0;
+	white-space: nowrap;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: .2px;
+	padding: 12px 0;
+	min-height: 16px;
+}
+.comingsoon2 {
+	padding-left: 8px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+.comingsoon3 {
+	color: #ccc;
+}
+.comingsoon4 {
+	
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	border: none;
+	font-size: 9px;
+	letter-spacing: .2px;
+	text-decoration: none;
+	text-transform: capitalize;
+	line-height: 16px;
+}
+.avertirdispo {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #000;
+	padding-top: 15px;
+	margin: 0 0 15px;
+	padding-left: 8px;
+	cursor: default;
+}
+.avertirdispo1 {
+	display: table;
+	font-size: 9px;
+	letter-spacing: .2px;
+	line-height: 12px;
+}
+}
+.avertirdispo2 {
+	padding-left: 10px;
+}
+.envelope::before  {
+	font-family: icon-fonts;
+	display: table-cell;
+    vertical-align: middle;
+    content: "\f138";
+}
+.taillepanier {
+	display: flex;
+	text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #000;
+    font-size: 14px;
+    letter-spacing: .2px;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    margin-top: 32px;
+    cursor: pointer;
+    justify-content: center;
+}
+.listepanier1 {
+	display: block;
+    padding: 0 0 0 12px;
+    margin-bottom: 16px;
+    background-image: url(../../icons/link-arrow.svg);
+    background-size: 8px;
+    background-position: 0;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.listepanier2 {
+	text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .2px;
+    line-height: 16px;
+    font-weight: 400;
+}
+</style>
+</head>
+<body>
+
+	<div class="page">
+
+		<div class="header1">
+			<header>
+				<div class="svgiconemenu">
+					<svg width="32" height="32"><path class="menu-icon__icon" fill="black" fill-rule="evenodd" d="M4 9h25v.5H4V9zm0 7.2h25v.5H4v-.5zm.3 7.3H4v.5h25v-.5H4.3z" clip-rule="evenodd"></path></svg>
+				</div>
+
+				<div class="barrenav">
+					<nav class="nav1">
+						<ul class="listemenunav">
+							<li>
+								<a href="exositecommerce_3.html">SE CONNECTER</a>
+							</li>
+							<li>
+								<a href="">AIDE</a>
+							</li>
+							<li>
+								<a href="">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="black" fill-rule="nonzero" d="M12 7V6c0-1 1-2 2-2h4c1 0 2 1 2 2v1h7v19H5V7h7zm14 1H6v17h20V8zM13 6v1h6V6c0-.5-.5-1-1-1h-4c-.5 0-1 .5-1 1z"></path></svg>
+								</a>
+							</li>
+
+						</ul>
+					</nav>
+					<div class="barrederecherche">
+						<span class="barrederecherchee">RECHERCHER__________</span>
+					</div>
+				</div>
+			</header>
+		</div>
+
+		<section class="section1">
+			<div class="paniernav">
+				<div class="paniernav1">
+					<div class="paniernav2">
+						<div class="titrepanier">
+							<h1>PANTALON CROPPED À PLIS</h1>
+						</div>
+						<div class="prixpanier">
+							39,95 EUR
+						</div>
+						<div class="infopanier">
+							<p>NOIR - 5006/405</p>
+						</div>	
+						<div class="textpanier">
+							<p>Pantalon à taille élastique et pinces sur le devant. Poches sur les côtés et poches plaquées à l'arrière. Fermeture à l'avant par zip et bouton.<br><br>LE MANNEQUIN MESURE : 189 cm
+							</p>
+						</div>
+						<div >
+							<button class="boutonafficherplus">Voir plus</button>
+						</div>
+						<form class="formulairepanier">
+							<fieldset>
+								<div class="comingsoon">
+									<label class="comingsoon1">
+										<span class="comingsoon2">
+											<div class="comingsoon3">
+												36
+											</div>
+										</span>
+										<a href="" class="comingsoon4">
+											Comming soon
+										</a>
+									</label>
+									<label class="comingsoon1">
+										<span class="comingsoon2">
+											<div class="comingsoon3">
+												38
+											</div>
+										</span>
+										<a href="" class="comingsoon4">
+											Comming soon
+										</a>
+									</label>
+									<label class="comingsoon1">
+										<span class="comingsoon2">
+											<div class="comingsoon3">
+												40
+											</div>
+										</span>
+										<a href="" class="comingsoon4">
+											Comming soon
+										</a>
+									</label>
+									<label class="comingsoon1">
+										<span class="comingsoon2">
+											<div class="comingsoon3">
+												42
+											</div>
+										</span>
+										<a href="" class="comingsoon4">
+											Comming soon
+										</a>
+									</label>
+									<label class="comingsoon1">
+										<span class="comingsoon2">
+											<div class="comingsoon3">
+												44
+											</div>
+										</span>
+										<a href="" class="comingsoon4">
+											Comming soon
+										</a>
+									</label>
+									<label class="comingsoon1">
+										<span class="comingsoon2">
+											<div class="comingsoon3">
+												46
+											</div>
+										</span>
+										<a href="" class="comingsoon4">
+											Comming soon
+										</a>
+									</label>
+								</div>
+								<div class="avertirdispo">
+									<div class="avertirdispo1">
+										<i class="envelope"></i>
+										<span class="avertirdispo2">M’avertir de la disponibilité</span>
+									</div>
+								</div>
+								<div class="taillepanier">
+									<a href="">
+										Quelle est ma taille?
+									</a>
+									<div>
+										<img src="https://static.zara.net/stdstatic/1.144.0-b.7/images/size-recommend.svg">
+									</div>
+								</div>
+							</fieldset>
+							<div>
+								<button class="ajouterpanier">Ajouter</button>
+								<a href="href="https://www.zara.com/fr/fr/shop/cart-v2""></a>
+							</div>
+						</form>
+						<div class="listepanier">
+							<ul>
+								<li class="listepanier1">
+									<a class="listepanier2"> Composition et entretien </a>
+								</li>
+								<li class="listepanier1">
+									<a class="listepanier2">
+								Voir disponibilité en magasin
+									</a>
+								</li>
+								<li class="listepanier1">
+									<a class="listepanier2">
+								Livraison, échange et retours
+									</a>
+								</li>
+								<li class="listepanier1">
+									<a class="listepanier2">
+								PARTAGER
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="imageproduit">
+				<div class="imageproduit1">
+					<img class="imageproduit2" src="chino8.jpg">
+				</div>
+				<div class="imageproduit1">
+					<img class="imageproduit2" src="chino7.jpg">
+				</div>
+				<div class="imageproduit1">
+					<img  class="imageproduit2" src="chino6.jpg">
+				</div>
+				<div class="imageproduit1">
+					<img  class="imageproduit2" src="chino5.jpg">
+				</div>
+				<div class="imageproduit1">
+					<img class="imageproduit2" src="chino4.jpg">
+				</div>
+				<div class="imageproduit1">
+					<img class="imageproduit2" src="chino3.jpg">
+				</div>
+				<div class="imageproduit1">
+					<img class="imageproduit2" src="chino2.jpg">
+				</div>
+				<div class="imageproduit1">
+					<img class="imageproduit2" src="chino1.jpg">
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer1">
+			<div class="newsletter">
+				<section class="sectionfooter"> 
+					<h2>abonnez-vous à notre newsletter</h2>
+					<form class="formulairefooter">
+						<div>
+							<div>
+								<div class="footermail">
+									<input type="text" placeholder=" Veuillez saisir votre adresse e-mail ici " name="email" class="saisiemail">
+								</div>
+							</div>
+						</div>
+					</form>
+				</section>
+				<ul class="listereseaux">
+					<li class="listereseauxsociaux">
+						<a href="https://www.instagram.com/zara/" target="INSTAGRAM" mkt-analytics="INSTAGRAM">INSTAGRAM</a>
+					</li>
+					<li class="listereseauxsociaux">
+						<a href="https://www.facebook.com/Zara" target="FACEBOOK" mkt-analytics="FACEBOOK">FACEBOOK</a>
+					</li>
+					<li class="listereseauxsociaux">
+						<a href="https://twitter.com/ZARA" target="TWITTER" mkt-analytics="TWITTER">TWITTER</a>
+					</li>
+					<li class="listereseauxsociaux">
+						<a href="https://es.pinterest.com/zaraofficial" target="PINTEREST" mkt-analytics="PINTEREST">PINTEREST</a>
+					</li>
+					<li class="listereseauxsociaux">
+						<a href="http://www.youtube.com/user/zara" target="YOUTUBE" mkt-analytics="YOUTUBE">YOUTUBE</a>
+					</li>
+				</ul>
+				<div class="blancfooter">
+					<ul class="listefooter">
+						<li class="lifooter">
+							<ul>
+								<li class="listetextefooter">AIDE</li>
+								<li class="listetextefooter2">Acheter sur Zara.com</li>
+								<li class="listetextefooter2">Produit</li>
+								<li class="listetextefooter2">Carte cadeau</li>
+								<li class="listetextefooter2">TICKET CADEAU</li>
+								<li class="listetextefooter2">Paiement</li>
+								<li class="listetextefooter2">Livraison</li>
+								<li class="listetextefooter2">ÉCHANGES ET RETOURS</li>
+								<li class="listetextefooter2">Magasins et entreprise</li>
+								<li class="listetextefooter2">Mon compte</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Suivez-nous</li>
+								<li class="listetextefooter2">Newsletter</li>
+								<li class="listetextefooter2">INSTAGRAM</li>
+								<li class="listetextefooter2">FACEBOOK</li>
+								<li class="listetextefooter2">TWITTER</li>
+								<li class="listetextefooter2">PINTEREST</li>
+								<li class="listetextefooter2">YOUTUBE</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Entreprise</li>
+								<li class="listetextefooter2">QUI SOMMES-NOUS ?</li>
+								<li class="listetextefooter2">Bureaux</li>
+								<li class="listetextefooter2">Magasins</li>
+								<li class="listetextefooter2">REJOIGNEZ-NOUS</li>
+								<li class="listetextefooter2"><a href="href="https://static.zara.net/static/pdfs/FR/impressum/impressum-fr_FR-20170920.pdf"">Mentions légales</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Politiques</li>
+								<li class="listetextefooter2"><a href="<a href="https://static.zara.net/static/pdfs/FR/privacy-policy/privacy-policy-fr_FR-20180525.pdf"">Politique de confidentialité</a></li>
+								<li class="listetextefooter2"><a href="https://static.zara.net/static//pdfs/FR/terms-and-conditions/terms-and-conditions-fr_FR-20200219.pdf">Conditions d´achat</a></li>
+								<li class="listetextefooter2"><a href="https://static.zara.net/static/pdfs/FR/giftcard-conditions/giftcard-conditions-fr_FR-20200210.pdf">CGV carte cadeau</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="france">
+				<ul class="ulfrance">
+					<li>France</li>
+					<li>Français | English</li>
+				</ul>
+			</div>
+			<div class="categorie">
+				<ul class="ulcategorie">
+					<li class="categorie1">
+						zara / homme / collection / pantalons / tout voir / pantalon cropped à plis 
+					</li>
+					<li class="categorie2">
+						© All rights reserved
+					</li>
+				</ul>
+			</div>
+		</footer>
+
+	</body>
+	</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>document.write('<link rel="stylesheet" href="extensible.css?dev=' +Math.floor(Math.random() *64) +'"\><\/>');</script>
+	<meta charset="utf-8">
+	<title>ZARA France | Nouvelle Collection en ligne</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" size="32x32" href="https://static.zara.net/stdstatic/1.143.0-b.43//images/favicon-32x32.png">
+
+	<style type="text/css">
+
+	body {
+		font-family:'Roboto', sans-serif;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+		font-size: 100%;
+		vertical-align: baseline;
+	}
+	.header1 {
+		height: 32px;
+		position: fixed;
+		z-index: 500;
+	}
+	.section1 {
+		padding-top: 40px;
+	}
+	.logozara {
+		position: absolute;
+		width: 172px;
+		margin-left: 65px;
+		margin-top: 15px;
+	}
+	.svgiconemenu {
+		position: absolute;
+		opacity: 1;
+		transition: 1s;
+		padding: 30px 32px 40px 16px;
+		height: 32px;
+		width: 32px;
+		top: 0;
+		left: 0;
+	}
+	.listemenunav  {
+		display: flex;
+		list-style-type: none;
+		text-align: center;
+		font-size: 12px;
+		letter-spacing: .2px;
+		align-items: center;
+	}
+	li {
+		list-style-type: none;
+		margin-right: 16px;
+		vertical-align: center;
+		font-family:'Roboto', sans-serif;
+	}
+	a {
+		z-index: 5;
+		text-decoration-line: none;
+		color: black;
+	}
+	.barrenav {
+		position: absolute;
+		display: flex;
+		font-family:'Roboto', sans-serif;
+		min-width: 1500px;
+		max-width: 100%;
+		flex-direction: row-reverse;
+
+	}
+	.nav1 {
+		padding-top: 15px;
+	}
+}
+	.barrederecherchee {
+		font-size: 20px;
+		color: black;
+		font-weight: bold;
+	}
+	.barrederecherche {
+		font-size: 20px;
+		color: black;
+		font-weight: bold;
+		letter-spacing: -0.5px;
+		width: 600px;
+		padding-top: 30px;
+	}
+	.premierimage1 {
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+	.photovieux {
+		z-index: 0;
+		position: relative;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+
+	}
+	.footer1 {
+		width: 100%;
+		max-height: 100vh;
+		font-family:'Roboto', sans-serif;
+	}
+	.sectionfooter {
+		margin: 120px 0 80px;
+	}
+	.newsletter {
+		display: block;
+		letter-spacing: .3px;
+		font-stretch: condensed;
+		line-height: 36px;
+		margin-bottom: 30px;
+		padding-bottom: 0;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	h2 {
+		font-size: 18px;
+		font-weight: bold;
+		letter-spacing: -1px;
+		text-transform: uppercase;
+	}
+	.footermail {
+		letter-spacing: .05em;
+		font-weight: 400;
+		text-align: center;
+		display: flex;
+		padding-top: 30px;
+		justify-content: center;
+	}
+	.saisiemailfooter {
+		position: absolute;
+		margin-top: 8px;
+		font-size: 12px;
+		letter-spacing: .2px;
+		line-height: 20px;
+		text-align: center;
+		opacity: .8;
+	}
+	.saisiemail {
+		border:none;
+		letter-spacing: .05em;
+		font-weight: 400;
+		width: 260px;
+		padding: 3px;
+		border-bottom: 1px solid black;
+	}
+	.listereseaux a {
+		text-align: center;
+		margin-top: 50px;
+		list-style-type: none;
+		color: black;
+
+	}
+	.listereseauxsociaux {
+		display: inline-block;
+		margin: 1em 2em;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 400;
+		margin-bottom: 50px;
+	}
+	.formulairefooter fieldset {
+		border:none;
+		text-align: center;
+		margin-top: 80px;
+		border-bottom: 1px solid black;
+	}
+	.blancfooter {
+		width: auto;
+		height: 31vh;
+		border-top: 1px solid #efefef;
+		margin-left: 180px;
+		margin-right: 10px;
+	}
+	.filtre {
+		font-family:'Roboto', sans-serif;
+		top: 120px;
+		font-size: 12px;
+		letter-spacing: .2px;
+		background-color: transparent;
+		left: 0;
+		line-height: 16px;
+		margin-bottom: 12px;
+		min-width: auto;
+		padding-bottom: 12px;
+		position: fixed;
+		text-transform: uppercase;
+		transition: background-color .3s ease-in;
+		width: 100%;
+		z-index: 8;
+	}
+	.filtrebouton{
+		float: right;
+		margin-right: 32px;
+		padding-left: 16px;
+		display: flex;
+		justify-content: space-between;
+		transition: width .3s;
+		position: relative;
+		z-index: 2;
+	}
+	.filtrebouton:hover > .barrenavproduit2 {
+		display: block;
+	}
+	.nettoyerfiltre {
+		display: none;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		opacity: 0.5;
+	}
+	.ajouterfiltre {
+		font-weight: 500;
+	}
+	.barrenavproduit {
+		transform: translateX(0);
+		top: 132px;
+		right: 0;
+		bottom: 0;
+		background-color: var(--theme-background-color-solid);
+		position: fixed;
+		z-index: 8;
+		text-transform: uppercase;
+		overflow-y: hidden;
+		transition: transform .3s;
+	}
+	.barrenavproduit1 {
+		height: 100%;
+		overflow-y: auto;
+	}
+	.barrenavproduit2 {
+		display: none;
+		padding: 52px 24px 24px 48px;
+		min-width: 280px;
+	}
+	.listebarrenavproduit {
+		list-style: none;
+		display: none;
+	}
+	.taille1 {
+		margin-top: 16px;
+		font-size: 12px;
+		letter-spacing: .2px;
+		cursor: pointer;
+	}
+	.taille2 {
+		display: none;
+	}
+	.couleur1 {
+		margin-top: 16px;
+		font-size: 12px;
+		letter-spacing: .2px;
+		cursor: pointer;
+	}
+	.couleur2 {
+		display: none;
+	}
+	.cara1 {
+		margin-top: 16px;
+		font-size: 12px;
+		letter-spacing: .2px;
+		cursor: pointer;
+	}
+	.cara2 {
+		display: none;
+	}
+	.prix1 {
+		margin-top: 16px;
+		font-size: 12px;
+		letter-spacing: .2px;
+		cursor: pointer;
+	}
+	.prix2 {
+		display: none;
+	}
+	.collection1 {
+		margin-top: 16px;
+		font-size: 12px;
+		letter-spacing: .2px;
+		cursor: pointer;
+	}
+	.collection2 {
+		display: none;
+	}
+	.ulitems {
+		margin-right: -32px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.listeimageproduit {
+		margin-bottom: 6px;
+		width: 23.6%;
+		margin-right: 6px;
+		padding-left: 10px;
+	}
+	.sectionimageproduit {
+		width: 100%;
+		overflow: hidden;
+		margin: 0 auto;
+		min-height: 500px;
+		box-sizing: border-box;
+	}
+	.tailleimage {
+		width: 100%;
+	}
+	.definitionitem {
+		margin-top: 10px;
+		margin-bottom: 60px;
+		font-family:'Roboto', sans-serif;
+	}
+	.collectionitem {
+		font-size: 14px;
+		letter-spacing: .2px;
+		font-stretch: condensed;
+		font-weight: 700;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+	.articleitem {
+		font-size: 12px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.prixarticle {
+		font-size: 12px;
+		margin-top: 4px;
+	}
+	.grostendances {
+		font-family:'Roboto', sans-serif;
+		margin: 104px auto 0;
+		padding-top: 0;
+		text-align: center;
+		padding-top: 40px;
+		width: 70%;
+		margin: auto;
+	}
+	.textetendances {
+		font-size: 30px;
+		letter-spacing: .4px;
+		font-stretch: condensed;
+		font-weight: 700;
+		line-heigh: 44px;
+		margin-bottom: 9px;
+		text-transform: uppercase;
+	}
+	.soustextetendances {
+		font-family:'Roboto', sans-serif;
+		font-size: 14px;
+		letter-spacing: .2px;
+		display: inline-block;
+		line-height: 16px;
+		width: 90%;
+	}
+	.listefooter {
+		margin: 40px 0;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0.2px;
+		padding: 0;
+		width: 100%;
+		display: flex;
+		text-align: start;
+	}
+	.lifooter {
+
+		vertical-align: top;
+		zoom: 1;
+		text-transform: uppercase;
+		width: 25%;
+		padding: 0 16px;
+	}
+	.listetextefooter {
+		font-size: 14px;
+		letter-spacing: .3px;
+		font-stretch: condensed;
+		font-weight: 700;
+		line-height: 20px;
+		padding-bottom: 24px;
+	}
+	.listetextefooter2 {
+		margin-bottom: 16px;
+		font-size: 12px;
+	}
+	.france {
+		margin-top: 30vh;
+	}
+	.ulfrance {
+		border-top: 1px solid #efefef;
+		padding-top: 30px;
+		margin-left: 10px;
+		margin-right: 10px;
+		display: flex;
+		justify-content: space-between;
+		text-transform: uppercase;
+	}
+	.categorie {
+		margin-bottom: 50px;
+	}
+	.ulcategorie {
+		display: flex;
+		justify-content: space-between;
+	}
+	.categorie1 {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.categorie2 {
+		font-size: 12px;
+		opacity: .5;
+	}
+		</style>
+</head>
+<body>
+
+	<div class="page">
+
+		<div class="header1">
+			<header>
+				<div class="svgiconemenu">
+					<svg width="32" height="32"><path class="menu-icon__icon" fill="black" fill-rule="evenodd" d="M4 9h25v.5H4V9zm0 7.2h25v.5H4v-.5zm.3 7.3H4v.5h25v-.5H4.3z" clip-rule="evenodd"></path></svg>
+				</div>
+
+				<div class="logozara">
+					<span>
+						<svg itemprop="logo" alt="Logotype de ZARA France. Aller à la page principale" viewBox="0 0 1077.37 453.17001" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="M 1022.11,439.76 862.49,0.29 862.38,0 h -3.15 l -32.87,90.31 -59.84,164.41 -0.14,-0.13 c -20.74,-18.3 -50,-29.74 -86.85,-34 L 668.29,219.43 679.44,218 C 740.21,207.08 781.06,168.7 781.06,122.46 781.06,59.05 721.42,14.79 635.99,14.79 H 458.24 V 18 h 51.65 V 345.65 L 384.45,0.29 384.34,0 h -3.15 l -32.87,90.31 -126.78,348.32 -0.78,0.09 c -2.167,0.267 -4.31,0.48 -6.43,0.64 -3.19,0.25 -6.36,0.4 -9.54,0.4 H 76.69 L 320.19,18 322,14.83 H 24.19 V 145.3 h 3.16 C 27.91,81.75 64.92,18 146.69,18 h 98.65 L 0,442.92 h 330.52 v -125 h -3.16 c -0.43,55.39 -31.83,108 -100.11,119.88 l -2.17,0.37 52,-142.93 h 145.67 l 52.49,144.52 h -51.78 v 3.16 h 203.23 v -3.16 h -52 v -218 h 60 c 61.06,0 96.08,27.28 96.08,74.82 v 38.67 c 0,4.26 0.29,10.49 0.61,15.7 v 0.19 l -32.25,88.6 H 657 v 3.16 h 87.21 v -3.16 h -41.68 l 29.37,-80.68 c 0.06,0.78 0.09,1.25 0.09,1.25 l 0.81,7.27 0.78,4.81 c 4.9,29.75 16.28,51.62 33.81,65 l 2.52,1.83 c 13.32,9.26 29.87,13.95 49.22,13.95 25.63,0 42.72,-6.39 56.83,-21.43 L 874.11,430 c -13,12 -23.91,16.86 -37.58,16.86 -23.29,0 -35.48,-28.25 -35.48,-56.11 v -54.18 c 0.124,-13.444 -1.981,-26.815 -6.23,-39.57 l -0.58,-1.68 v -0.06 h 106.55 l 52.49,144.52 H 901.5 v 3.16 h 175.87 v -3.16 z M 278.24,292.08 350,94.93 421.6,292.08 Z M 574.72,218.59 V 18 h 45.8 C 681.7,18 714,54.37 714,123.14 c 0,73.14 -18.54,95.45 -79.31,95.45 z M 793,292.08 792.69,291.3 c -4.735,-11.532 -11.628,-22.054 -20.31,-31 l -3,-3 L 769.06,257 828,94.93 899.6,292.08 Z" fill="black"></path></svg>
+					</span>
+				</div>
+
+				<div class="barrenav">
+					<nav class="nav1">
+						<ul class="listemenunav">
+							<li>
+								<a href="exositecommerce_3.html">SE CONNECTER</a>
+							</li>
+							<li>
+								<a href="">AIDE</a>
+							</li>
+							<li>
+								<a href="">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="black" fill-rule="nonzero" d="M12 7V6c0-1 1-2 2-2h4c1 0 2 1 2 2v1h7v19H5V7h7zm14 1H6v17h20V8zM13 6v1h6V6c0-.5-.5-1-1-1h-4c-.5 0-1 .5-1 1z"></path></svg>
+								</a>
+							</li>
+
+						</ul>
+					</nav>
+					<div class="barrederecherche">
+						<span class="barrederecherchee">RECHERCHER__________</span>
+					</div>
+				</div>
+				<div>	
+					<div class="filtre">
+
+						<div class="filtrebouton">
+							<div class="ajouterfiltre">
+								+ Filtres
+							</div>
+							<div class="nettoyerfiltre">
+								NETTOYER
+							</div>
+							<section class="barrenavproduit">
+								<div class="barrenavproduit1">
+									<div class="barrenavproduit2">
+										<a href=""></a>
+										<ul class="listebarrenavproduit">
+											<li >
+												<h4>Taille</h4>
+												<div>
+													<div class="taille1">XXL</div>
+													<div class="taille1">XS</div>
+													<div class="taille1">S</div>
+													<div class="taille2">L</div>
+													<div class="taille2">XL</div>
+													<div class="taille2">M</div>
+													<div class="taille2">36</div>
+													<div class="taille2">38</div>
+													<div class="taille2">39</div>
+													<div class="taille2">40</div>
+													<div class="taille2">41</div>
+													<div class="taille2">42</div>
+													<div class="taille2">43</div>
+													<div class="taille2">44</div>
+													<div class="taille2">45</div>
+													<div class="taille2">46</div>
+													<div class="taille2">47</div>
+													<div class="taille2">48</div>
+													<div class="taille2">50</div>
+													<div class="taille2">52</div>
+													<div class="taille2">54</div>
+													<div class="taille2">56</div>
+													<div class="taille1">
+														<span>+ Afficher plus</span>
+														<span style="display: none;">- Afficher moins</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h4>Couleur</h4>
+												<div>
+													<div class="couleur1">Autres</div>
+													<div class="couleur1">Beiges</div>
+													<div class="couleur1">Blanc</div>
+													<div class="couleur2">Bleus</div>
+													<div class="couleur2">Crus</div>
+													<div class="couleur2">Gris</div>
+													<div class="couleur2">Jaunes</div>
+													<div class="couleur2">Kaki</div>
+													<div class="couleur2">Marrons</div>
+													<div class="couleur2">Métallisés</div>
+													<div class="couleur2">Noirs</div>
+													<div class="couleur2">Oranges</div>
+													<div class="couleur2">Roses</div>
+													<div class="couleur2">Rouges</div>
+													<div class="couleur2">Verts</div>
+													<div class="couleur2">Violets</div>
+													<div class="couleur1">
+														<span>+ Afficher plus</span>
+														<span style="display: none;">- Afficher moins</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h4>Caractéristiques</h4>
+												<div>
+													<div class="cara1">Accessoires</div>
+													<div class="cara1">Blazers</div>
+													<div class="cara1">Blousons</div>
+													<div class="cara2">Chaussures</div>
+													<div class="cara2">Chemises</div>
+													<div class="cara2">Jeans</div>
+													<div class="cara2">Manteaux et vestes</div>
+													<div class="cara2">Pantalons</div>
+													<div class="cara2">Sacs</div>
+													<div class="cara2">Sweat-shirts</div>
+													<div class="cara2">T-shirts</div>
+													<div class="cara2">Trenchs et parkas</div>
+													<div class="cara2">Tricot</div>
+													<div class="cara1">
+														<span>+ Afficher plus</span>
+														<span style="display: none;">-Afficher moins</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h4>Prix</h4>
+												<div>
+													<div class="prix1">10,00 EUR</div>
+													<div class="prix1">30,00 EUR</div>
+													<div class="prix1">50,00 EUR</div>
+													<div class="prix2">70,00 EUR</div>
+													<div class="prix2">90,00 EUR</div>
+													<div class="prix2">110,00 EUR</div>
+													<div class="prix2">130,00 EUR</div>
+													<div class="prix1">
+														<span>+Afficher plus</span>
+														<span style="display: none;">- Afficher moins</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h4>Collection</h4>
+												<div>
+													<div class="collection1">Accessoires</div>
+													<div class="collection1">Circular Knitwear</div>
+													<div class="collection1">Denim</div>
+													<div class="collection2">Dressy</div>
+													<div class="collection2">Knitwear</div>
+													<div class="collection2">Man</div>
+													<div class="collection2">Sport</div>
+													<div class="collection1">
+														<span>+ Afficher plus</span>
+														<span style="display: none;">- Afficher moins</span>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					
+				</div>
+			</header>
+		</div>
+
+		<section class="section1">
+			<div class="sectionimageproduit">
+				<div class="premierimage">
+					<a href="#">
+						<img class="premierimage1" src="zara1.jpg">
+					</a>
+				</div> 
+
+				<div class="ulitems">
+					<div class="listeimageproduit">
+						<a href="#">
+							<img class="tailleimage" src="zara2.jpg">
+						</a>
+						<div class="definitionitem">
+							<div class="collectionitem">
+								NEW
+							</div>
+							<div class="articleitem">
+								VESTE DE COSTUME FLUO
+							</div>
+							<div class="prixarticle">
+								89,95 EUR
+							</div>
+						</div>
+					</div>
+					<div class="listeimageproduit">
+						<a href="#">
+							<img class="tailleimage" src="zara3.jpg">
+						</a>
+						<div class="definitionitem">
+							<div class="collectionitem">
+								NEW
+							</div>
+							<div class="articleitem">
+								VESTE DE COSTUME FLUO
+							</div>
+							<div class="prixarticle">
+								89,95 EUR
+							</div>
+						</div>
+					</div>
+					<div class="listeimageproduit">
+						<a href="#">
+							<img class="tailleimage" src="zara4.jpg">
+						</a>
+						<div class="definitionitem">
+							<div class="collectionitem">
+								NEW
+							</div>
+							<div class="articleitem">
+								VESTE DE COSTUME FLUO
+							</div>
+							<div class="prixarticle">
+								89,95 EUR
+							</div>
+						</div>
+					</div>
+					<div class="listeimageproduit">
+						<a href="#">
+							<img class="tailleimage" src="zara5.jpg">
+						</a>
+						<div class="definitionitem">
+							<div class="collectionitem">
+								NEW
+							</div>
+							<div class="articleitem">
+								VESTE DE COSTUME FLUO
+							</div>
+							<div class="prixarticle">
+								89,95 EUR
+							</div>
+						</div>
+					</div>
+					<div class="listeimageproduit">
+						<a href="#">
+							<img class="tailleimage" src="zara6.jpg">
+						</a>
+						<div class="definitionitem">
+							<div class="collectionitem">
+								NEW
+							</div>
+							<div class="articleitem">
+								VESTE DE COSTUME FLUO
+							</div>
+							<div class="prixarticle">
+								89,95 EUR
+							</div>
+						</div>
+					</div>
+					<div class="listeimageproduit">
+						<a href="#">
+							<img class="tailleimage" src="zara7.jpg">
+						</a>
+						<div class="definitionitem">
+							<div class="collectionitem">
+								NEW
+							</div>
+							<div class="articleitem">
+								VESTE DE COSTUME FLUO
+							</div>
+							<div class="prixarticle">
+								89,95 EUR
+							</div>
+						</div>
+					</div>
+					<div class="listeimageproduit">
+						<a href="#">
+							<img class="tailleimage" src="zara8.jpg">
+						</a>
+						<div class="definitionitem">
+							<div class="collectionitem">
+								NEW
+							</div>
+							<div class="articleitem">
+								VESTE DE COSTUME FLUO
+							</div>
+							<div class="prixarticle">
+								89,95 EUR
+							</div>
+						</div>
+					</div>
+					<div class="listeimageproduit">
+						<a href="#">
+							<img class="tailleimage" src="zara9.jpg">
+						</a>
+						<div class="definitionitem">
+							<div class="collectionitem">
+								NEW
+							</div>
+							<div class="articleitem">
+								VESTE DE COSTUME FLUO
+							</div>
+							<div class="prixarticle">
+								89,95 EUR
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grostendances" >
+				<h1 class="textetendances">NOUVELLES TENDANCES POUR HOMME CHAQUE SEMAINE</h1>
+				<div class="soustextetendances">
+					Réinventez votre look avec nos derniers vêtements, chaussures et accessoires pour homme. Découvrez nos nouveaux styles et coupes chaque semaine. 
+
+					Abonnez-vous à notre newsletter et soyez le premier à découvrir les dernières tendances.
+				</div>
+			</div>
+			
+		</section>
+
+		<footer class="footer1">
+			<div class="newsletter">
+				<section class="sectionfooter"> 
+					<h2>abonnez-vous à notre newsletter</h2>
+					<form class="formulairefooter">
+						<div>
+							<div>
+								<div class="footermail">
+									<input type="text" placeholder=" Veuillez saisir votre adresse e-mail ici " name="email" class="saisiemail">
+								</div>
+							</div>
+						</div>
+					</form>
+				</section>
+				<ul class="listereseaux">
+					<li class="listereseauxsociaux">
+						<a href="https://www.instagram.com/zara/" target="INSTAGRAM" mkt-analytics="INSTAGRAM">INSTAGRAM</a>
+					</li>
+					<li class="listereseauxsociaux">
+						<a href="https://www.facebook.com/Zara" target="FACEBOOK" mkt-analytics="FACEBOOK">FACEBOOK</a>
+					</li>
+					<li class="listereseauxsociaux">
+						<a href="https://twitter.com/ZARA" target="TWITTER" mkt-analytics="TWITTER">TWITTER</a>
+					</li>
+					<li class="listereseauxsociaux">
+						<a href="https://es.pinterest.com/zaraofficial" target="PINTEREST" mkt-analytics="PINTEREST">PINTEREST</a>
+					</li>
+					<li class="listereseauxsociaux">
+						<a href="http://www.youtube.com/user/zara" target="YOUTUBE" mkt-analytics="YOUTUBE">YOUTUBE</a>
+					</li>
+				</ul>
+				<div class="blancfooter">
+					<ul class="listefooter">
+						<li class="lifooter">
+							<ul>
+								<li class="listetextefooter">AIDE</li>
+								<li class="listetextefooter2">Acheter sur Zara.com</li>
+								<li class="listetextefooter2">Produit</li>
+								<li class="listetextefooter2">Carte cadeau</li>
+								<li class="listetextefooter2">TICKET CADEAU</li>
+								<li class="listetextefooter2">Paiement</li>
+								<li class="listetextefooter2">Livraison</li>
+								<li class="listetextefooter2">ÉCHANGES ET RETOURS</li>
+								<li class="listetextefooter2">Magasins et entreprise</li>
+								<li class="listetextefooter2">Mon compte</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Suivez-nous</li>
+								<li class="listetextefooter2">Newsletter</li>
+								<li class="listetextefooter2">INSTAGRAM</li>
+								<li class="listetextefooter2">FACEBOOK</li>
+								<li class="listetextefooter2">TWITTER</li>
+								<li class="listetextefooter2">PINTEREST</li>
+								<li class="listetextefooter2">YOUTUBE</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Entreprise</li>
+								<li class="listetextefooter2">QUI SOMMES-NOUS ?</li>
+								<li class="listetextefooter2">Bureaux</li>
+								<li class="listetextefooter2">Magasins</li>
+								<li class="listetextefooter2">REJOIGNEZ-NOUS</li>
+								<li class="listetextefooter2"><a href="href="https://static.zara.net/static/pdfs/FR/impressum/impressum-fr_FR-20170920.pdf"">Mentions légales</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Politiques</li>
+								<li class="listetextefooter2"><a href="<a href="https://static.zara.net/static/pdfs/FR/privacy-policy/privacy-policy-fr_FR-20180525.pdf"">Politique de confidentialité</a></li>
+								<li class="listetextefooter2"><a href="https://static.zara.net/static//pdfs/FR/terms-and-conditions/terms-and-conditions-fr_FR-20200219.pdf">Conditions d´achat</a></li>
+								<li class="listetextefooter2"><a href="https://static.zara.net/static/pdfs/FR/giftcard-conditions/giftcard-conditions-fr_FR-20200210.pdf">CGV carte cadeau</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="france">
+				<ul class="ulfrance">
+					<li>France</li>
+					<li>Français | English</li>
+				</ul>
+			</div>
+			<div class="categorie">
+				<ul class="ulcategorie">
+					<li class="categorie1">
+						zara / homme / nouveautés 
+					</li>
+					<li class="categorie2">
+						© All rights reserved
+					</li>
+				</ul>
+			</div>
+		</footer>
+
+	</body>
+	</html>

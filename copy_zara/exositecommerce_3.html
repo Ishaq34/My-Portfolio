@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>document.write('<link rel="stylesheet" href="extensible.css?dev=' +Math.floor(Math.random() *64) +'"\><\/>');</script>
+	<meta charset="utf-8">
+	<title>ZARA France | Nouvelle Collection en ligne</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" size="32x32" href="https://static.zara.net/stdstatic/1.143.0-b.43//images/favicon-32x32.png">
+	<style type="text/css">
+
+	body {
+		font-family:'Roboto', sans-serif;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+		font-size: 100%;
+		vertical-align: baseline;
+	}
+	.header1 {
+		height: 32px;
+		position: fixed;
+		z-index: 500;
+	}
+	.section1 {
+		padding-top: 104px;
+		padding-left: 368px;
+		padding-right: 32px;
+	}
+	.logozara {
+		position: absolute;
+		width: 172px;
+		margin-left: 65px;
+		margin-top: 15px;
+	}
+	.svgiconemenu {
+		position: absolute;
+		opacity: 1;
+		transition: 1s;
+		padding: 30px 32px 40px 16px;
+		height: 32px;
+		width: 32px;
+		top: 0;
+		left: 0;
+	}
+	.listemenunav  {
+		display: flex;
+		list-style-type: none;
+		text-align: center;
+		font-size: 12px;
+		letter-spacing: .2px;
+		align-items: center;
+	}
+	li {
+		list-style-type: none;
+		margin-right: 16px;
+		vertical-align: center;
+		font-family:'Roboto', sans-serif;
+	}
+	a {
+		z-index: 5;
+		text-decoration-line: none;
+		color: black;
+	}
+	.barrenav {
+		position: absolute;
+		display: flex;
+		font-family:'Roboto', sans-serif;
+		min-width: 1500px;
+		max-width: 100%;
+		flex-direction: row-reverse;
+
+	}
+	.nav1 {
+		padding-top: 15px;
+	}
+}
+.barrederecherchee {
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+}
+.barrederecherche {
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+	letter-spacing: -0.5px;
+	width: 600px;
+	padding-top: 30px;
+}
+.footer1 {
+	width: 100%;
+	max-height: 100vh;
+	font-family:'Roboto', sans-serif;
+}
+.sectionfooter {
+	margin: 120px 0 80px;
+}
+.newsletter {
+	display: block;
+	letter-spacing: .3px;
+	font-stretch: condensed;
+	line-height: 36px;
+	margin-bottom: 30px;
+	padding-bottom: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+}
+.footermail {
+	letter-spacing: .05em;
+	font-weight: 400;
+	text-align: center;
+	display: flex;
+	padding-top: 30px;
+	justify-content: center;
+}
+.saisiemailfooter {
+	position: absolute;
+	margin-top: 8px;
+	font-size: 12px;
+	letter-spacing: .2px;
+	line-height: 20px;
+	text-align: center;
+	opacity: .8;
+}
+.saisiemail {
+	border:none;
+	letter-spacing: .05em;
+	font-weight: 400;
+	width: 260px;
+	padding: 3px;
+	border-bottom: 1px solid black;
+}
+.listereseaux a {
+	text-align: center;
+	margin-top: 50px;
+	list-style-type: none;
+	color: black;
+
+}
+.listereseauxsociaux {
+	display: inline-block;
+	margin: 1em 2em;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 400;
+	margin-bottom: 50px;
+}
+.formulairefooter fieldset {
+	border:none;
+	text-align: center;
+	margin-top: 80px;
+	border-bottom: 1px solid black;
+}
+.blancfooter {
+	width: auto;
+	height: 35vh;
+	border-top: 1px solid #efefef;
+	margin-left: 180px;
+	margin-right: 10px;
+}
+.listefooter {
+	margin: 40px 0;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.2px;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	text-align: start;
+}
+.lifooter {
+
+	vertical-align: top;
+	zoom: 1;
+	text-transform: uppercase;
+	width: 25%;
+	padding: 0 16px;
+}
+.listetextefooter {
+	font-size: 14px;
+	letter-spacing: .3px;
+	font-stretch: condensed;
+	font-weight: 700;
+	line-height: 20px;
+	padding-bottom: 24px;
+}
+.listetextefooter2 {
+	margin-bottom: 16px;
+	font-size: 12px;
+}
+.france {
+	margin-top: 30vh;
+}
+.ulfrance {
+	border-top: 1px solid #efefef;
+	padding-top: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+}
+.categorie {
+	margin-bottom: 5px;
+}
+.ulcategorie {
+	display: flex;
+	justify-content: flex-end;
+}
+.categorie1 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.categorie2 {
+	font-size: 12px;
+	opacity: .5;
+}
+.formulairesection {
+	font-family:'Roboto', sans-serif;
+	margin-right: 4%;
+	margin-bottom: 100px;
+	width: 48%;
+	display: inline-block;
+	float: left;
+}
+.formulaire_section {
+	font-family:'Roboto', sans-serif;
+	margin-right: 4%;
+	margin-bottom: 450px;
+}
+.formulairesection1 {
+	margin-bottom: -20px;
+}
+.formulairesection2 {
+	position: relative;
+	float: left;
+	clear: left;
+	width: 100%;
+	min-height: 72px;
+	padding: 27px 0 13px;
+	position: relative;
+	width: 100%;
+	max-width: 278px;
+}
+.formulairesection3 {
+	min-height: 60px;
+	padding-bottom: 0;
+	margin-bottom: 20px;
+}
+.formulairesection4{
+	position: relative;
+	width: 100%;
+	max-width: 350px;
+}
+.titreutilisateur {
+	font-size: 26px;
+	letter-spacing: .3px;
+	font-stretch: condensed;
+	font-weight: 700;
+	margin-bottom: 14px;
+	padding-bottom: 0;
+	text-transform: none;
+}
+.boutonformulaire1 {
+	position: absolute;
+	left: 0;
+	margin-bottom: 0;
+	transform-origin: left top;
+	transition-duration: 166ms;
+	letter-spacing: .2px;
+	line-height: 20px;
+	cursor: text;
+	display: inline-block;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #d3d3d3;
+	font-size: 14px;
+	letter-spacing: .2px;
+	line-height: 20px;
+	width: 100%;
+	color: #000;
+}
+.boutonformulaire2 {
+	position: relative;
+	left: 0;
+	margin-bottom: 0;
+	transform-origin: left top;
+	transition-duration: 166ms;
+	letter-spacing: .2px;
+	line-height: 20px;
+	cursor: text;
+	display: inline-block;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #d3d3d3;
+	font-size: 14px;
+	letter-spacing: .2px;
+	line-height: 20px;
+	width: 80%;
+	color: #000;
+}
+.boutonconnection {
+	border:none;
+	font-weight: bold;
+	height: 50px;
+	letter-spacing: .5px;
+	line-height: 50px;
+	padding: 0 35.5px;
+	font-size: 16px;
+	letter-spacing: .2px;
+	margin-top: 17px;
+	color: white;
+	background-color: black;
+	padding-bottom: 10px;
+}
+.boutonconnection:hover {
+	background-color: grey;
+	color: black;
+}
+.lienformulaire {
+	margin-top: 30px;
+	font-size: 12px;
+	letter-spacing: .2px;
+	text-decoration: underline;
+	color: grey;
+	clear: both;
+	display: block;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.textformulaire {
+	font-size: 12px;
+	letter-spacing: .2px;
+	margin-bottom: 20px;
+
+}
+.boutoncompte{
+	font-weight: bold;
+	height: 50px;
+	letter-spacing: .5px;
+	line-height: 50px;
+	padding: 0 35.5px;
+	font-size: 16px;
+	letter-spacing: .2px;
+	margin-top: 17px;
+	color: white;
+	background-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.boutoncompte:hover {
+	background-color: grey;
+	color: black;
+}
+</style>
+</head>
+<body>
+
+	<div class="page">
+
+		<div class="header1">
+			<header>
+				<div class="svgiconemenu">
+					<svg width="32" height="32"><path class="menu-icon__icon" fill="black" fill-rule="evenodd" d="M4 9h25v.5H4V9zm0 7.2h25v.5H4v-.5zm.3 7.3H4v.5h25v-.5H4.3z" clip-rule="evenodd"></path></svg>
+				</div>
+
+				<div class="logozara">
+					<span>
+						<svg itemprop="logo" alt="Logotype de ZARA France. Aller à la page principale" viewBox="0 0 1077.37 453.17001" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="M 1022.11,439.76 862.49,0.29 862.38,0 h -3.15 l -32.87,90.31 -59.84,164.41 -0.14,-0.13 c -20.74,-18.3 -50,-29.74 -86.85,-34 L 668.29,219.43 679.44,218 C 740.21,207.08 781.06,168.7 781.06,122.46 781.06,59.05 721.42,14.79 635.99,14.79 H 458.24 V 18 h 51.65 V 345.65 L 384.45,0.29 384.34,0 h -3.15 l -32.87,90.31 -126.78,348.32 -0.78,0.09 c -2.167,0.267 -4.31,0.48 -6.43,0.64 -3.19,0.25 -6.36,0.4 -9.54,0.4 H 76.69 L 320.19,18 322,14.83 H 24.19 V 145.3 h 3.16 C 27.91,81.75 64.92,18 146.69,18 h 98.65 L 0,442.92 h 330.52 v -125 h -3.16 c -0.43,55.39 -31.83,108 -100.11,119.88 l -2.17,0.37 52,-142.93 h 145.67 l 52.49,144.52 h -51.78 v 3.16 h 203.23 v -3.16 h -52 v -218 h 60 c 61.06,0 96.08,27.28 96.08,74.82 v 38.67 c 0,4.26 0.29,10.49 0.61,15.7 v 0.19 l -32.25,88.6 H 657 v 3.16 h 87.21 v -3.16 h -41.68 l 29.37,-80.68 c 0.06,0.78 0.09,1.25 0.09,1.25 l 0.81,7.27 0.78,4.81 c 4.9,29.75 16.28,51.62 33.81,65 l 2.52,1.83 c 13.32,9.26 29.87,13.95 49.22,13.95 25.63,0 42.72,-6.39 56.83,-21.43 L 874.11,430 c -13,12 -23.91,16.86 -37.58,16.86 -23.29,0 -35.48,-28.25 -35.48,-56.11 v -54.18 c 0.124,-13.444 -1.981,-26.815 -6.23,-39.57 l -0.58,-1.68 v -0.06 h 106.55 l 52.49,144.52 H 901.5 v 3.16 h 175.87 v -3.16 z M 278.24,292.08 350,94.93 421.6,292.08 Z M 574.72,218.59 V 18 h 45.8 C 681.7,18 714,54.37 714,123.14 c 0,73.14 -18.54,95.45 -79.31,95.45 z M 793,292.08 792.69,291.3 c -4.735,-11.532 -11.628,-22.054 -20.31,-31 l -3,-3 L 769.06,257 828,94.93 899.6,292.08 Z" fill="black"></path></svg>
+					</span>
+				</div>
+
+				<div class="barrenav">
+					<nav class="nav1">
+						<ul class="listemenunav">
+							<li>
+								<a href="">AIDE</a>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
+
+		<section class="section1">
+			<div class="formulairesection">
+				<h2 class="titreutilisateur">Je suis déjà utilisateur(-trice)</h2>
+				<p class="textformulaire">Saisissez votre adresse e-mail et votre mot de passe pour vous identifier.</p>
+				<form class="formulairesection1" action="#" method="POST">
+					<div class="formulairesection2">
+						<input class="boutonformulaire1" type="text" name="email" placeholder="E-mail">
+					</div>
+					<div class="formulairesection3">
+						<div class="formulairesection4">
+							<input class="boutonformulaire2" type="password" name="password" placeholder="Mot de passe">
+						</div>
+					</div>
+					<a class="lienformulaire" href="https://www.zara.com/fr/fr/user/account/password/recover">Vous avez oublié votre mot de passe?</a>
+					<button class="boutonconnection" type="submit">SE CONNECTER</button>
+				</form>
+			</div>
+			<div class="formulaire_section">
+				<h2 class="titreutilisateur">Nouvel(le) utilisateur(-trice)</h2>
+				<p class="textformulaire">Si vous n'avez pas encore de compte d'utilisateur de zara.com, utilisez cette option pour accéder au formulaire d'inscription. </p>
+				<p class="textformulaire">Nous vous demanderons les informations nous permettant d'accélérer le processus d'achat.</p>
+				<a href="#" class="boutoncompte">Créer un compte</a>
+			</div>
+		</section>
+
+		<footer class="footer1">
+			<div class="newsletter">
+				<div class="blancfooter">
+					<ul class="listefooter">
+						<li class="lifooter">
+							<ul>
+								<li class="listetextefooter">AIDE</li>
+								<li class="listetextefooter2">Acheter sur Zara.com</li>
+								<li class="listetextefooter2">Produit</li>
+								<li class="listetextefooter2">Carte cadeau</li>
+								<li class="listetextefooter2">TICKET CADEAU</li>
+								<li class="listetextefooter2">Paiement</li>
+								<li class="listetextefooter2">Livraison</li>
+								<li class="listetextefooter2">ÉCHANGES ET RETOURS</li>
+								<li class="listetextefooter2">Magasins et entreprise</li>
+								<li class="listetextefooter2">Mon compte</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Suivez-nous</li>
+								<li class="listetextefooter2">Newsletter</li>
+								<li class="listetextefooter2">INSTAGRAM</li>
+								<li class="listetextefooter2">FACEBOOK</li>
+								<li class="listetextefooter2">TWITTER</li>
+								<li class="listetextefooter2">PINTEREST</li>
+								<li class="listetextefooter2">YOUTUBE</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Entreprise</li>
+								<li class="listetextefooter2">QUI SOMMES-NOUS ?</li>
+								<li class="listetextefooter2">Bureaux</li>
+								<li class="listetextefooter2">Magasins</li>
+								<li class="listetextefooter2">REJOIGNEZ-NOUS</li>
+								<li class="listetextefooter2"><a href="href="https://static.zara.net/static/pdfs/FR/impressum/impressum-fr_FR-20170920.pdf"">Mentions légales</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li class="listetextefooter">Politiques</li>
+								<li class="listetextefooter2"><a href="<a href="https://static.zara.net/static/pdfs/FR/privacy-policy/privacy-policy-fr_FR-20180525.pdf"">Politique de confidentialité</a></li>
+								<li class="listetextefooter2"><a href="https://static.zara.net/static//pdfs/FR/terms-and-conditions/terms-and-conditions-fr_FR-20200219.pdf">Conditions d´achat</a></li>
+								<li class="listetextefooter2"><a href="https://static.zara.net/static/pdfs/FR/giftcard-conditions/giftcard-conditions-fr_FR-20200210.pdf">CGV carte cadeau</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="france">
+				<ul class="ulfrance">
+					<li>France</li>
+					<li>Français | English</li>
+				</ul>
+			</div>
+			<div class="categorie">
+				<ul class="ulcategorie">
+					<li class="categorie2">
+						© All rights reserved
+					</li>
+				</ul>
+			</div>
+		</footer>
+
+	</body>
+	</html>
